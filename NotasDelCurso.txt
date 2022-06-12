@@ -1,0 +1,8 @@
+Clase: Server-Side vs Client-Side sessions
+Las sesiones del lado del servidor funcionan almacenando un indicador en memoria o en la base de datos, cuando este indicador desaparece, significa que el usuario ya NO esta autenticado 👍
+Estos indicadores viajan (normalmente) a través de cookies, el servidor lo envia al navegador y el navegador lo envía de vuelta al servidor 🔂
+Del lado del cliente NO utilizamos sesiones 😮
+En Single Page Applications NO tenemos forma de verificar la autenticación de los usuarios, tendríamos que refrescar la página cada vez que necesitamos nueva información y básicamente se pierde el chiste, así no funcionan estas aplicaciones 😦
+En vez de sesiones utilizamos tokens, enviamos los datos de autenticación de nuestros usuarios al servidor y, si los datos son correctos, el servidor devuelve un token, una llave que nos da acceso por algún tiempo a la información autorizada de los usuarios 🎉👌
+Si en alguna de las peticiones al servidor nos informan que el token ha expirado pos, volvemos a hacer login y seguimos como si nada 😅💪.
+
